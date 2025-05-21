@@ -3,3 +3,11 @@
 @theme {
     --font-myfont:"Plus Jakarta Sans", "sans-serif";
 }
+@layer utilities{
+    .countParent {
+        @apply flex flex-col items-center text-2xl;
+    }
+    .countChild{
+        @apply text-[#00FF84] font-black;
+    }
+}
