@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
     --font-myfont:"Plus Jakarta Sans", "sans-serif";
 }
@@ -15,15 +15,15 @@
         @apply inline-block h-[2px] w-full md:h-30 md:w-[2px] bg-gray-200;
     }
     .tag {
-        @apply inline-block px-4 py-2 border border-red-500 rounded-full hover:bg-[green] hover:text-white transition duration-300 hover:cursor-pointer;
+        @apply dark:text-white dark:hover:text-yellow-500 inline-block px-4 py-2 border border-red-500 rounded-full hover:bg-[green] hover:text-white transition duration-300 hover:cursor-pointer text-[10px] md:text-[16px];
     }
     .gift {
-        @apply text-[10px] md:text-[16px] inline-block px-6 py-2 border border-black rounded-full hover:bg-[green] hover:text-white transition duration-300 hover:cursor-pointer;
+        @apply dark:text-white dark:border-white text-[10px] md:text-[16px] inline-block px-6 py-2 border border-black rounded-full hover:bg-[green] hover:text-white transition duration-300 hover:cursor-pointer;
     }
     .h-one {
-        @apply text-[16px] md:text-2xl font-semibold ;
+        @apply dark:text-white text-[16px] md:text-2xl font-semibold ;
     }
     .spanTag{
-        @apply text-[#20484F] text-[10px] md:text-[13px] sm:text-[16px];
+        @apply cursor-pointer hover:underline dark:text-white text-[#20484F] text-[10px] md:text-[13px] sm:text-[16px];
     }
 }
